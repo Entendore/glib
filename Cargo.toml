@@ -1,0 +1,24 @@
+[package]
+name = "glib"
+version = "0.3.0"
+edition = "2021"
+description = "Frontier graphics library for game engines"
+
+[features]
+default = ["null_backend"]
+vulkan = []
+null_backend = []
+gpu_driven = []
+
+[dependencies]
+slotmap      = "1.0"
+smallvec     = "1.13"
+parking_lot  = "0.12"
+bitflags     = "2.4"
+bytemuck     = { version = "1.14", features = ["derive"] }
+raw-window-handle = "0.6"
+tracing      = "0.1"
+thiserror    = "1.0"
+rustc-hash   = "1.1"
+
+[dev-dependencies]
